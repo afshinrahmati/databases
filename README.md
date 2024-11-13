@@ -24,7 +24,7 @@ FULL JOIN: Returns all records when there is a match in either left or right tab
 3) GROUP BY & Aggregation Functions
 GROUP BY & Aggregation Functions
 GROUP BY is used to group rows that have the same values into summary rows.
-Common aggregation functions include COUNT(), SUM(), AVG(), MAX(), and MIN().
+Common aggregation use for calculations functions include COUNT(), SUM(), AVG(), MAX(), and MIN().
 4) Subqueries
 A subquery is a query within another query. It can be used in the SELECT, FROM, WHERE, and HAVING clauses.
 ```
@@ -41,17 +41,18 @@ Normalization Normalization is a process in database design that aims to reduce 
 1) ACID ,COMMIT:Finalizes a transaction ,ROLLBACK: Reverts a transaction.
 8) Views
 A view is a virtual table based on the result of a query. It simplifies complex queries and can improve security by limiting direct access to underlying tables.
-```
-A view is a virtual table based on the result of a query. It simplifies complex queries and can improve security by limiting direct access to underlying tables.
-```
+virtual tables created using a SELECT statement.
+9) SQL Constraints
 
+* Rules applied to columns for maintaining data integrity.
+Common constraints include:
+NOT NULL: Ensures that a column cannot have a NULL value.
+UNIQUE: Ensures all values in a column are unique.
+CHECK: Ensures values in a column meet a specific condition.
+DEFAULT: Sets a default value for a column if no value is provided.
+FOREIGN KEY: Maintains referential integrity between tables.
 
-
-
-
-
-
-
+10)  Stored Procedures and Functions ,Triggers,Data Manipulation and Data Definition Languages (DML & DDL)
 
 
 
