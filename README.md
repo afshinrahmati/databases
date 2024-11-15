@@ -35,38 +35,38 @@ UPDATE users SET email = 'afi.doe@example.com' WHERE name = 'afshin';
 DELETE FROM users WHERE name = 'afshin';
 
 ```
-#############################################################################
+####################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################
 2) Joins
 Combining rows from two or more tables based on a related column.
 INNER JOIN: Returns only matching records.
 LEFT JOIN (LEFT OUTER JOIN): Returns all records from the left table and matched records from the right table.
 RIGHT JOIN (RIGHT OUTER JOIN): Similar to LEFT JOIN, but returns all records from the right table.
 FULL JOIN: Returns all records when there is a match in either left or right table
-   #############################################################################
+   ##########################################################################################################################################################################################################################################################################################################################################################
 3) GROUP BY & Aggregation Functions
 GROUP BY & Aggregation Functions
 GROUP BY is used to group rows that have the same values into summary rows.
 Common aggregation use for calculations functions include COUNT(), SUM(), AVG(), MAX(), and MIN().
 HAVING we can define some order like if ,HAVING age > 120
-   #############################################################################
+   ##########################################################################################################################################################################################################################################################################################################################################################
 4) Subqueries
 A subquery is a query within another query. It can be used in the SELECT, FROM, WHERE, and HAVING clauses.
     ```
     SELECT name FROM employees WHERE department_id = (SELECT department_id FROM departments WHERE department_name = 'IT');
     
     ```
-   #############################################################################
+   ##########################################################################################################################################################################################################################################################################################################################################################
 5) Indexes
 Indexes speed up retrieval of records but can slow down data modification operations (like INSERT, UPDATE, and DELETE).defualt on Primary key
 Primary Key: Uniquely identifies each record.
 Foreign Key: Ensures referential integrity between tables.
- #############################################################################
+ ##########################################################################################################################################################################################################################################################################################################################################################
 6) primary key = those Validator are unique that can delete or update like PRODUCT_ID ,user_ID
 primary key == UNIQUE ,NOT NULL
     ```
         USER_ID SERIAL PRIMARY KEY
     ```
-   #############################################################################
+   ##########################################################################################################################################################################################################################################################################################################################################################
 7) FOREIGN KEY
 A foreign key (FK) is a column or combination of columns that is used to establish and enforce a link between the data in two 
 tables to control the data that can be stored in the foreign key table.
@@ -74,7 +74,7 @@ tables to control the data that can be stored in the foreign key table.
         CREATE TABLE users(ID PRIMARY KEY)
         CREATE TABLE orders(user_id integert REFRENCES users(ID))
     ```
-  #############################################################################
+  ##########################################################################################################################################################################################################################################################################################################################################################
 8) Normalization and Denormalization
 * ANOMALY == problem
 Normalization Normalization is a process in database design that aims to reduce data redundancy (repetition) and avoid data anomalies (inconsistencies) during data insertion, updating, or deletion.
@@ -101,7 +101,7 @@ wrong if delete one user we do not delete the product that his order
 4) Boyce-Codd Normal Form (BCNF):
    A stricter version of 3NF. Each determinant (attribute determining another) must be a candidate key.
 5) FOURTH NORMAL FORM (4NF)
-   #############################################################################
+   ##########################################################################################################################################################################################################################################################################################################################################################
 9) Transactions
 those unit of work (واحدی از عملیات) on Database like transform Money.
 * Start ----> Operation1,Operation2,Operation3,.... ---> Commit OR RoleBack
@@ -116,7 +116,7 @@ those unit of work (واحدی از عملیات) on Database like transform Mon
 A view is a virtual table based on the result of a query. It simplifies complex queries and can improve security by limiting direct access to underlying tables.
 virtual tables created using a SELECT statement.
 
-#############################################################################
+##########################################################################################################################################################################################################################################################################################################################################################
 # SQL Constraints
 
 * Rules applied to columns for maintaining data integrity.
@@ -129,7 +129,7 @@ FOREIGN KEY: Maintains referential integrity between tables.
 
 10)  Stored Procedures and Functions ,Triggers,Data Manipulation and Data Definition Languages (DML & DDL)
 
-##########################################################
+##########################################################################################################################################################
 # RELATIONS
 1) MANY TO ONE(DEFAULT)
 ![Alt text](./manyTOone1.png)
@@ -181,7 +181,7 @@ And we have 4 type of  join:
 2) LEFT JOIN:all command information + all information table left
 3) RIGHT JOIN:all command information + all information table قهلاف
 4) FULL JOIN:all command information
-##########################################################
+##########################################################################################################################################################
 # KEYS
 1) Primary Key
    The primary key in SQL is a single, or a group of fields or columns that can uniquely identify a row in a table. 
@@ -216,7 +216,7 @@ value in table with theme forExample phonenumber or nantionalCode are unique and
     Birthday ==> 2001/08/15
     Counrty = Ir
     postCode = 1785
-##########################################################
+##########################################################################################################################################################
 # UNION,UNION ALL,INTERSECT,EXCEPT
 that is look like join But without need primary key and foregin key.
 query1+query2
@@ -235,7 +235,7 @@ query1+query2
 4) Except
    return all in query one provided that that data not exist on query two.
    iran is in query two and in query one is italy and iran and return italy
-##########################################################
+##########################################################################################################################################################
 # ACID
 ACID is a set of properties that ensure the reliable processing of database transactions.
 ### Transaction
