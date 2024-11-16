@@ -265,6 +265,36 @@ or: If a database has a rule that every account must have a positive balance, an
 
 👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽
 🌟REDIS🌟
+Redis database is a kind of information warehouse that stores information directly in memory. Because of this, the speed of accessing the information inside is very, very high. Whenever we need to find information very quickly, Redis is a great option.
 
+Let me give an example. Suppose you are running an online store. Whenever someone enters the site and wants to see a product, it is necessary to read the information of that product from another warehouse (which is the same database). This may take some time, especially if the site is very busy and several people want to see the product at the same time.
+
+How does Redis benefit us now? Redis can keep a copy of that product's information in itself. In this way, whenever someone wants to see the product, the information is read very quickly from Redis and we don't need to go to that main warehouse (database) anymore. As a result, the speed of the site increases and the user is not bothered.
+
+This was just a simple example. Redis has many uses, and I mentioned some of the most important ones above:
+
+🔺 Maintaining information about site users (Session Store):
+When a person enters the site and is browsing the site, it is necessary for the site to know what the user has done and where he is now. Redis can store this information so that the site can provide a seamless experience to the user.
+
+Real-Time Analytics:
+ Suppose you want to know how many people are visiting your site at any given moment or what products they are clicking on. Redis can help you collect and display this information very quickly.
+
+Speeding up reading information from the database (Caching Database Queries):
+Sometimes it is necessary to go to hashtag#database and look for some specific information. This may take a while. Redis can store the results of these searches. The next time you want to read the same information, Redis can deliver it to you very quickly.
+
+Message Queues:
+Maybe you want to start some tasks on your site that take a long time, such as sending emails or processing a series of information. Redis can queue these jobs and make sure they are all done in order.
+
+Sending and receiving messages for online chat (Pub-Sub for Real-Time Notifications):
+ If you have a chat program, it is necessary that every message that is sent reaches the other party very quickly. Redis can do this for you and create a smooth and uninterrupted chat for the user of your application.
+
+Finding nearby places (Geospatial Indexing):
+ If you have a routing program, you need to know where the user is and which is the nearest restaurant or gas station to him. Redis can help you store and manage user location.
+
+🔺 Prevention of misuse of APIs (Rate Limiting):
+Maybe someone wants to apply to your site one after another and harass you! Redis can prevent this and make sure that each user uses the site's facilities sufficiently.
+
+Increasing stability and fault tolerance (Redis Clustering for High Availability):
+ If the information on your site is very important, it must be always available. Redis can store information in several different places (shards). If there is a problem somewhere, the information can be accessed from another place.
 👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽
 🌟MONGO🌟
