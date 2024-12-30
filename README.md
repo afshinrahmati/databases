@@ -28,53 +28,53 @@ WHERE name IN("afshin","sara,"amir")
 ORDER BY (ASC<A,B,C>ASNDEING,DESC<z,y,z>DESENDEING)
 WHERE username LIKE 'A_f%'==>_ sure exist more than 2 world,% each empty or full.
 LIMIT 30
-```
+``
 SELECT * FROM users;
 INSERT INTO users (name, email) VALUES ('afshin', 'afi@example.com');
 UPDATE users SET email = 'afi.doe@example.com' WHERE name = 'afshin';
 DELETE FROM users WHERE name = 'afshin';
 
-```
-####################################################################################################################################################################################################################################################################################################################
+``
+
 2) Joins
 Combining rows from two or more tables based on a related column.
 INNER JOIN: Returns only matching records.
 LEFT JOIN (LEFT OUTER JOIN): Returns all records from the left table and matched records from the right table.
 RIGHT JOIN (RIGHT OUTER JOIN): Similar to LEFT JOIN, but returns all records from the right table.
 FULL JOIN: Returns all records when there is a match in either left or right table
-   ##########################################################################################################################################################
+   
 3) GROUP BY & Aggregation Functions
 GROUP BY & Aggregation Functions
 GROUP BY is used to group rows that have the same values into summary rows.
 Common aggregation use for calculations functions include COUNT(), SUM(), AVG(), MAX(), and MIN().
 HAVING we can define some order like if ,HAVING age > 120
-   ##########################################################################################################################################################
+   
 4) Subqueries
 A subquery is a query within another query. It can be used in the SELECT, FROM, WHERE, and HAVING clauses.
-    ```
+    ``
     SELECT name FROM employees WHERE department_id = (SELECT department_id FROM departments WHERE department_name = 'IT');
     
-    ```
-   ##########################################################################################################################################################
+    ``
+   
 5) Indexes
 Indexes speed up retrieval of records but can slow down data modification operations (like INSERT, UPDATE, and DELETE).defualt on Primary key
 Primary Key: Uniquely identifies each record.
 Foreign Key: Ensures referential integrity between tables.
- ##########################################################################################################################################################
+ 
 6) primary key = those Validator are unique that can delete or update like PRODUCT_ID ,user_ID
 primary key == UNIQUE ,NOT NULL
-    ```
+    ``
         USER_ID SERIAL PRIMARY KEY
-    ```
-   ##########################################################################################################################################################
+    ``
+   
 7) FOREIGN KEY
 A foreign key (FK) is a column or combination of columns that is used to establish and enforce a link between the data in two 
 tables to control the data that can be stored in the foreign key table.
-    ```
+    ``
         CREATE TABLE users(ID PRIMARY KEY)
         CREATE TABLE orders(user_id integert REFRENCES users(ID))
-    ```
-  ##########################################################################################################################################################
+    ``
+  
 8) Normalization and Denormalization
 * ANOMALY == problem
 Normalization Normalization is a process in database design that aims to reduce data redundancy (repetition) and avoid data anomalies (inconsistencies) during data insertion, updating, or deletion.
@@ -101,7 +101,7 @@ wrong if delete one user we do not delete the product that his order
 4) Boyce-Codd Normal Form (BCNF):
    A stricter version of 3NF. Each determinant (attribute determining another) must be a candidate key.
 5) FOURTH NORMAL FORM (4NF)
-   ##########################################################################################################################################################
+   
 9) Transactions
 those unit of work (واحدی از عملیات) on Database like transform Money.
 * Start ----> Operation1,Operation2,Operation3,.... ---> Commit OR RoleBack
@@ -116,7 +116,7 @@ those unit of work (واحدی از عملیات) on Database like transform Mon
 A view is a virtual table based on the result of a query. It simplifies complex queries and can improve security by limiting direct access to underlying tables.
 virtual tables created using a SELECT statement.
 
-##########################################################################################################################################################
+
 # SQL Constraints
 
 * Rules applied to columns for maintaining data integrity.
@@ -129,28 +129,28 @@ FOREIGN KEY: Maintains referential integrity between tables.
 
 10)  Stored Procedures and Functions ,Triggers,Data Manipulation and Data Definition Languages (DML & DDL)
 
-##########################################################
+
 # RELATIONS
 1) MANY TO ONE(DEFAULT)
 ![Alt text](./manyTOone1.png)
 father can relation with each child But the child just have one father
-```
+``
  afshin can buy bnana and car and mobile ==> afshin is user<father> that product that store in order that relation with user
  - for each product we create a order tabele that has one father in product afshin and not amir and afshin
-```
+``
 2) ONE TO ONE
 ![Alt text](./OntToOne1.png)
 a parent just can has one child. ==> each country just has one capital.
-```
+``
 IRAN = TEHRAN;
 JAPAN = TOKUP;
 CREATE TABLE COUNTRY (ID...)
 CREATE TABLE CAPITAL(COuntri_ID integer REFENCE counrty(ID) UNIQUE)
-```
+``
 3) MANY TO MANY(x,y,z that z is middleman between x,y)
 ![Alt text](./ManyToMany.png)
    a parent can has a lot child and a child can has a lot parent writer and book,a witer has al lot book or a book has many writter
-```
+``
 CREATE TABLE Book(id)
 CREATE TABLE author(Id)
 CREATE TABLE book_author(
@@ -158,16 +158,16 @@ bookId REF
 authorId REF
 PRIMARY KEY(Book,author)
 )
-```
+``
 ![Alt text](./manyTomany2.png)
-```
+``
 INSERT INTO book (name) VALUES ('harry patter'),('joker');
 INSERT INTO author (name) VALUES ('kevin'),('jack');
 INSERT INTO book_author (book,author) VALUES(1,2)
 INSERT INTO book_author  (book,author) VALUES(2,1)
 INSERT INTO book_author (book,author) VALUES(2,2)
 // hary patter write iust by jevin But joker write with kevin and jack
-```
+``
 ![Alt text](./manytomany3.png)
 
 # JOIN
@@ -181,7 +181,7 @@ And we have 4 type of  join:
 2) LEFT JOIN:all command information + all information table left
 3) RIGHT JOIN:all command information + all information table قهلاف
 4) FULL JOIN:all command information
-##########################################################
+
 # KEYS
 1) Primary Key
    The primary key in SQL is a single, or a group of fields or columns that can uniquely identify a row in a table. 
@@ -216,7 +216,7 @@ value in table with theme forExample phonenumber or nantionalCode are unique and
     Birthday ==> 2001/08/15
     Counrty = Ir
     postCode = 1785
-##########################################################
+
 # UNION,UNION ALL,INTERSECT,EXCEPT
 that is look like join But without need primary key and foregin key.
 query1+query2
@@ -235,7 +235,7 @@ query1+query2
 4) Except
    return all in query one provided that that data not exist on query two.
    iran is in query two and in query one is italy and iran and return italy
-##########################################################
+
 # ACID
 ACID is a set of properties that ensure the reliable processing of database transactions.
 ### Transaction
