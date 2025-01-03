@@ -6,9 +6,20 @@ DBMS( database management system) ==>postgresql , mongoose,SQLITE(file),mySQL,Or
 psql is a terminal-based front-end to POSTGRESQL ,comand-line interface to POSTGRESQL
 CRUD()==> CREATE,READ,Update,DELETE
 
-## NOSQL
+## NOSQL(not only sql)
 key-value,GRAPH,Document,column-family(casendra)
 without good structure
+* 3 V ==> 1) volume (large data) 2) velocity(speed on write) 3) variety(schema less);
+- no ACID in nosql
++ implement BASE instead of ACID 
++ B ==> `Basically avaliable` : operation on read and write in a large data.
++ S ==> `Soft State` : state is different forexaple afshin see a thing but amir see an other thing becasue data replication on time.
++ e ==> `Eventual consistency`: in ACID end of the operation we check this opeartion is correct or not but in nosql we do not check this on time but in future we have to check
+
+* it is good for a large data.
+* todays software utility instead of run on the os in run on the cloude so it need a lot of data
+* it is good for different schema.
+* it is good for write like twitter coment.
 ## 🌟SQL(structured query language)🌟
 SQL stands for Structured Query Language. It is a standard programming language used to interact with relational databases. SQL is used for querying, manipulating, 
 and managing data stored in relational database management systems (RDBMS).
@@ -484,3 +495,26 @@ Maybe someone wants to apply to your site one after another and harass you! Redi
 1) Monitoring: Tracks if a master or replica is working correctly.
 2) Automatic Failover: Promotes a replica to master if the master fails.
 3) Configuration Provider: Applications can query Sentinel for the current master.
+
+
+
+# ElasticSearch
+* it is search engine and communication  with restful.
+* analytics the data very easy. like what is the pattern
+* data store in with index.
+* It is horizontally scalable, meaning you can add more nodes to the cluster to handle larger data sets or higher query loads.
+* Real-Time Search and Analytics: Data is indexed and becomes searchable in near real-time, allowing quick updates and queries.
+* RESTful APIs: ElasticSearch provides a simple and powerful REST API that works with JSON, making it accessible from almost any programming language.
+* Powering the search functionality on e-commerce sites, blogs, and apps.
+* Analyzing and searching log data in real time, often combined with Logstash and Kibana.
+* Storing and querying large datasets for analytics purposes.
++ Speed: Fast indexing and query responses, even with large datasets.
++ Scalability: Easily scale horizontally by adding nodes to the cluster.
++ Versatility: Can handle a wide variety of data types, including text, numbers, dates, and geospatial data.
++ Open Source: Free to use and supported by a large community
+- Resource-Intensive: Requires significant memory and CPU resources, especially for large clusters.
+## ELASTIC STACK
+### KIBANA
+### ELASTICSEARCH
+### INTEGRATION
+### Logstash
